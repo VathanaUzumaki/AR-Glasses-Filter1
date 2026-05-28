@@ -1,31 +1,46 @@
 # Basic Face Filter
 
-A Unity AR face filter app for iOS, built with AR Foundation 6.3 and ARKit. Detects the user's face via the front camera and overlays themed prop filters (cat, devil, goblin, classy gentleman) that the user can switch between with on-screen buttons.
+A Unity AR face filter app for Android, built with AR Foundation 6.3 and ARCore XR Plugin. The app detects the user's face using the front camera and overlays themed prop filters such as cat ears, devil horns, goblin accessories, and classy gentleman props. Users can switch between filters using on-screen buttons.
 
-## Built with
+## Built With
 
-- Unity 6 (6000.3.16f1)
-- AR Foundation 6.3.4 + Apple ARKit XR Plugin 6.3.4
-- Universal Render Pipeline
-- TextMesh Pro
+* Unity 6 (6000.3.16f1)
+* AR Foundation 6.3.4
+* ARCore XR Plugin 6.3.4
+* Universal Render Pipeline (URP)
+* TextMesh Pro
 
-## Project structure
+## Project Structure
 
-- `Assets/Scenes/Basic_Face_Filter.unity` — main AR scene
-- `Assets/_BasicFaceFilter/Prefabs/` — face prefab + 8 prop prefabs (cat ears, horns, moustache, etc.)
-- `Assets/_BasicFaceFilter/Scripts/FaceTrackingChooser.cs` — custom AR configuration chooser that forces `ARFaceTrackingConfiguration` (front camera) instead of the default world-tracking fallback
-- `Assets/_BasicFaceFilter/Scripts/FilterSwitcher.cs` — runtime swap of prop combinations when the user taps a filter button
+* `Assets/Scenes/Basic_Face_Filter.unity` — Main AR scene
+* `Assets/_BasicFaceFilter/Prefabs/` — Face prefab and prop prefabs
+* `Assets/_BasicFaceFilter/Scripts/FilterSwitcher.cs` — Script for switching filters during runtime
 
-## Requirements to run
+## Requirements
 
-- macOS with Xcode 26+
-- iPhone X or newer (A12+ chip / TrueDepth camera), iOS 15+
-- Apple Developer account for code signing
+### Windows PC
 
-## Build steps
+* Windows 10 or Windows 11
+* Unity Hub installed
+* Unity 6 installed
+* Android Build Support module installed
+
+### Android Device
+
+* Android 10 or newer
+* ARCore-supported device
+* USB Debugging enabled
+
+## How to Run
 
 1. Open the project in Unity 6.
-2. Switch platform to iOS in Build Profiles.
-3. Confirm scene `Basic_Face_Filter` is the only enabled scene.
-4. Build to a folder.
-5. Open the generated `.xcodeproj` in Xcode, sign with your team, run on a physical iPhone.
+2. Go to `File > Build Settings`.
+3. Select `Android` platform.
+4. Click `Switch Platform`.
+5. Make sure `Basic_Face_Filter` is the only enabled scene.
+6. Connect your Android phone using a USB cable.
+7. Enable `USB Debugging` in Developer Options on your phone.
+8. Click `Build and Run`.
+9. Choose a new folder to save the build files.
+10. Unity will build and install the application automatically on your Android device.
+
